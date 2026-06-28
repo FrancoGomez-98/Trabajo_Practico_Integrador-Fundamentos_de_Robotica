@@ -95,7 +95,7 @@ graph TD
 
 ## 🔌 Hardware y Esquema de Conexiones
 
-El sistema está alimentado por una fuente de alimentación conmutada de PC que provee una línea dedicada de **12V y hasta 15A de capacidad de corriente**, lo que asegura un suministro eléctrico óptimo libre de caídas de tensión cuando el PID demanda torque máximo para contrarrestar la fuerza de gravedad.
+El sistema está alimentado por una fuente de alimentación conmutada que provee una línea dedicada de **12V y hasta 15A de capacidad de corriente**, lo que asegura un suministro eléctrico óptimo libre de caídas de tensión cuando el PID demanda torque máximo para contrarrestar la fuerza de gravedad.
 
 Todas las masas (`GND`) de la etapa lógica del ESP32, el puente H L298N y las placas de los codificadores magnéticos se unificaron para asegurar una referencia de señal común y mitigar el ruido electromagnético.
 
