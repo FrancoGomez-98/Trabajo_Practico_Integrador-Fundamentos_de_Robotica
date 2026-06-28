@@ -71,19 +71,19 @@ El sistema operativo del firmware se diseñó bajo un paradigma modular para des
 graph TD
     User([👤 Usuario]) -->|Introduce Coordenadas X, Y| Serial[📟 Terminal Serial / Máquina de Estados]
     
-    subground "Nivel de Abstracción Matemática"
+    subgraph "Nivel de Abstracción Matemática"
         Serial -->|Validación de Límites| IK[📐 Módulo Cinemática Inversa: cinematica.h]
         IK -->|Cálculo de Ángulos Absolutos Desacoplados| Meta[🎯 Objetivos Theta1 y Theta2]
     end
 
-    subground "Nivel de Lazo Cerrado de Alta Frecuencia (control.h)"
+    subgraph "Nivel de Lazo Cerrado de Alta Frecuencia (control.h)"
         Meta --> PID[🧠 Controlador PID Dual]
         Encoder1([🧲 Encoder AS5600 M1]) -->|Protocolo I2C / Offset de Home| PID
         Encoder2([🧲 Encoder AS5600 M2]) -->|Protocolo I2C / Offset de Home| PID
         PID -->|Filtro Cíclico de Error Angular| Action[⚙️ Señal Computada PWM]
     end
 
-    subground "Etapa de Potencia y Actuación (motores.h)"
+    subgraph "Etapa de Potencia y Actuación (motores.h)"
         Action -->|Pisos de Fuerza y Zona Muerta| Driver[🔌 Puente H L298N]
         Driver -->|12V / 15A Fuente PC| Motors[🚙 Micromotores N20]
     end
