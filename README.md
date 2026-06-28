@@ -101,19 +101,18 @@ Todas las masas (`GND`) de la etapa lógica del ESP32, el puente H L298N y las p
 
 ### Tabla de Conexiones e Interfaces de Datos
 
-| Componente | Función | Tipo de Señal | GPIO ESP32 |
+| Componente Asociado | Función Física | Tipo de Señal / Bus | Pin ESP32 |
 | :--- | :--- | :--- | :---: |
-| **L298N - ENA** | PWM Motor 1 (Base) | PWM (LEDC) | **GPIO 14** |
-| **L298N - IN1** | Sentido de giro Motor 1 | Salida Digital | **GPIO 27** |
-| **L298N - IN2** | Sentido de giro Motor 1 | Salida Digital | **GPIO 26** |
-| **L298N - ENB** | PWM Motor 2 (Codo) | PWM (LEDC) | **GPIO 32** |
-| **L298N - IN3** | Sentido de giro Motor 2 | Salida Digital | **GPIO 25** |
-| **L298N - IN4** | Sentido de giro Motor 2 | Salida Digital | **GPIO 33** |
-| **AS5600 M1 - SDA** | Datos I²C (Base) | Bus I²C | **GPIO 21** |
-| **AS5600 M1 - SCL** | Reloj I²C (Base) | Bus I²C | **GPIO 22** |
-| **AS5600 M2 - SDA** | Datos I²C (Codo) | Bus I²C | **GPIO 18** |
-| **AS5600 M2 - SCL** | Reloj I²C (Codo) | Bus I²C | **GPIO 19** |
-
+| **Motor 1 (Base)** | Control de Velocidad (Habilitación ENA) | PWM Out | **GPIO 14** |
+| **Motor 1 (Base)** | Dirección de Giro (IN1) | Digital Out | **GPIO 27** |
+| **Motor 1 (Base)** | Dirección de Giro (IN2) | Digital Out | **GPIO 26** |
+| **Motor 2 (Codo)** | Control de Velocidad (Habilitación ENB) | PWM Out | **GPIO 32** |
+| **Motor 2 (Codo)** | Dirección de Giro (IN3) | Digital Out | **GPIO 25** |
+| **Motor 2 (Codo)** | Dirección de Giro (IN4) | Digital Out | **GPIO 33** |
+| **Sensor M1 (Base)** | Encoder Absoluto AS5600 | Bus I2C 1 (SDA) | **GPIO 21** |
+| **Sensor M1 (Base)** | Encoder Absoluto AS5600 | Bus I2C 1 (SCL) | **GPIO 22** |
+| **Sensor M2 (Codo)** | Encoder Absoluto AS5600 | Bus I2C 2 (SDA) | **GPIO 18** |
+| **Sensor M2 (Codo)** | Encoder Absoluto AS5600 | Bus I2C 2 (SCL) | **GPIO 19** |
 
 ### Alimentación del Sistema
 
@@ -138,13 +137,8 @@ Se desarrolló un filtro algebraico cíclico en `control.h` que confina el error
 ### 2. Desacoplamiento de la Transmisión Coaxial Diferencial
 Dado que el actuador del codo se encuentra anclado estáticamente en la base, la rotación de la base (Eslabón 1) desplaza físicamente la posición angular del codo en el espacio aunque el segundo motor no gire. El módulo `cinematica.h` compensa este fenómeno restando dinámicamente las componentes angulares absolutas para entregar metas aisladas y estables:
 
-$$
-\theta_{2,\mathrm{absoluto}}
-=
-\theta_{1,\mathrm{absoluto}}
--
-\theta_{2,\mathrm{relativo}}
-$$
+$$\theta_{2} = \theta_{1} - \theta_{relativo}$$
+
 
 ### 3. Mitigación de Holgura Mecánica (*Backlash*) mediante Banda Muerta
 Los engranajes internos de los motores N20 introducen un juego libre muerto que inducía ciclos límite de oscilación permanente (temblequeo) cuando el brazo intentaba estabilizarse en estado estacionario bajo la influencia del peso propio. 
