@@ -101,16 +101,29 @@ Todas las masas (`GND`) de la etapa lógica del ESP32, el puente H L298N y las p
 
 ### Tabla de Conexiones e Interfaces de Datos
 
-| Componente Asociado | Función Física | Tipo de Señal / Bus | Pin ESP32 |
+| Componente | Función | Tipo de Señal | GPIO ESP32 |
 | :--- | :--- | :--- | :---: |
-| **Motor 1 (Base)** | Control de Velocidad y Sentido (IN1) | PWM / Digital Out | Pin [XX] |
-| **Motor 1 (Base)** | Control de Velocidad y Sentido (IN2) | PWM / Digital Out | Pin [XX] |
-| **Motor 2 (Codo)** | Control de Velocidad y Sentido (IN3) | PWM / Digital Out | Pin [XX] |
-| **Motor 2 (Codo)** | Control de Velocidad y Sentido (IN4) | PWM / Digital Out | Pin [XX] |
-| **Sensor M1 (Base)** | Encoder Absoluto AS5600 | Bus I2C (SDA) | Pin [XX] |
-| **Sensor M1 (Base)** | Encoder Absoluto AS5600 | Bus I2C (SCL) | Pin [XX] |
-| **Sensor M2 (Codo)** | Encoder Absoluto AS5600 | Bus I2C (SDA - Alt) | Pin [XX] |
-| **Sensor M2 (Codo)** | Encoder Absoluto AS5600 | Bus I2C (SCL - Alt) | Pin [XX] |
+| **L298N - ENA** | PWM Motor 1 (Base) | PWM (LEDC) | **GPIO 14** |
+| **L298N - IN1** | Sentido de giro Motor 1 | Salida Digital | **GPIO 27** |
+| **L298N - IN2** | Sentido de giro Motor 1 | Salida Digital | **GPIO 26** |
+| **L298N - ENB** | PWM Motor 2 (Codo) | PWM (LEDC) | **GPIO 32** |
+| **L298N - IN3** | Sentido de giro Motor 2 | Salida Digital | **GPIO 25** |
+| **L298N - IN4** | Sentido de giro Motor 2 | Salida Digital | **GPIO 33** |
+| **AS5600 M1 - SDA** | Datos I²C (Base) | Bus I²C | **GPIO 21** |
+| **AS5600 M1 - SCL** | Reloj I²C (Base) | Bus I²C | **GPIO 22** |
+| **AS5600 M2 - SDA** | Datos I²C (Codo) | Bus I²C | **GPIO 18** |
+| **AS5600 M2 - SCL** | Reloj I²C (Codo) | Bus I²C | **GPIO 19** |
+
+
+### Alimentación del Sistema
+
+| Elemento | Alimentación |
+| :--- | :--- |
+| ESP32 | 5 V (USB o regulador) |
+| L298N | 12 V |
+| Motores N20 | 12 V (a través del L298N) |
+| AS5600 (x2) | 3.3 V |
+| Masa (GND) | Común entre ESP32, L298N, sensores y fuente |
 
 ---
 
