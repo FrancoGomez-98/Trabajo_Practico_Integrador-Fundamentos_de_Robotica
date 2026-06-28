@@ -89,11 +89,11 @@ graph TD
     end
 
     Motors --> Robot[🦾 Movimiento Físico del Brazo]
-```
 
 ---
 
 ```markdown
+
 ---
 
 ## 🔌 Hardware y Esquema de Conexiones
