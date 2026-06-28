@@ -124,7 +124,10 @@ Se desarrolló un filtro algebraico cíclico en `control.h` que confina el error
 
 ### 2. Desacoplamiento de la Transmisión Coaxial Diferencial
 Dado que el actuador del codo se encuentra anclado estáticamente en la base, la rotación de la base (Eslabón 1) desplaza físicamente la posición angular del codo en el espacio aunque el segundo motor no gire. El módulo `cinematica.h` compensa este fenómeno restando dinámicamente las componentes angulares absolutas para entregar metas aisladas y estables:
-$$\theta_{2\text{\_absoluto}} = \theta_{1\text{\_absoluto}} - \theta_{2\text{\_relativo}}$$
+
+$$
+\theta_{2,\mathrm{abs}}=\theta_{1,\mathrm{abs}}-\theta_{2,\mathrm{rel}}
+$$
 
 ### 3. Mitigación de Holgura Mecánica (*Backlash*) mediante Banda Muerta
 Los engranajes internos de los motores N20 introducen un juego libre muerto que inducía ciclos límite de oscilación permanente (temblequeo) cuando el brazo intentaba estabilizarse en estado estacionario bajo la influencia del peso propio. 
@@ -162,7 +165,7 @@ La inestabilidad fue resuelta programando una **ventana de histéresis (Zona Mue
 └── 📄 README.md        # Guía técnica principal de presentación.
 ```
 
---
+---
 
 ## 👤 Autor
 
