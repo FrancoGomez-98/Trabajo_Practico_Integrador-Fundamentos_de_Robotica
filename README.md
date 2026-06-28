@@ -48,7 +48,7 @@ El proyecto presentó desafíos mecánicos y de control avanzados debido a las s
 El diseño estructural fue impreso íntegramente en 3D, optimizando las tolerancias para contener la etapa de potencia y sensado de forma compacta.
 
 <div align="center">
-  <img src="Media/ensamblaje.PNG" alt="Ensamble Mecánico Completo" width="450"/>
+  <img src="assets/Image1.PNG" alt="Ensamble Mecánico Completo" width="450"/>
   <br>
   <em>Vista explotada de los actuadores en la base fija y las poleas síncronas de transmisión coaxial.</em>
 </div>
@@ -56,7 +56,7 @@ El diseño estructural fue impreso íntegramente en 3D, optimizando las toleranc
 <br>
 
 <div align="center">
-  <img src="Media/ensamblaje_.PNG" alt="Módulo de Contención Estructural" width="450"/>
+  <img src="assets/Image2.PNG" alt="Módulo de Contención Estructural" width="450"/>
   <br>
   <em>Vista externa con el Módulo de Retención y Bloqueo Axial (Cubre Motores) diseñado para absorber las fuerzas de tracción de las correas y eliminar juego estructural.</em>
 </div>
