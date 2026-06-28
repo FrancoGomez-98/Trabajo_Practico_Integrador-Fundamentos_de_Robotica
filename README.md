@@ -31,7 +31,7 @@
 
 ## 🧠 Descripción y Problemática
 
-Este repositorio contiene el desarrollo integral del firmware de control, modelado cinemático e ingeniería de empotramiento de un **Manipulador planar de dos grados de libertad (GDL)** que opera en el plano vertical. El proyecto fue diseñado y ejecutado como Trabajo Integrador Final para la asignatura **Fundamentos de Robótica** en la carrera de Ingeniería de la **Universidad Nacional de Lomas de Zamora (UNLZ)**.
+Este repositorio contiene el desarrollo integral del firmware de control, modelado cinemático e ingeniería de empotramiento de un **Manipulador planar de dos grados de libertad (GDL)**. El proyecto fue diseñado y ejecutado como Trabajo Integrador Final para la asignatura **Fundamentos de Robótica** en la carrera de Ingeniería de la **Universidad Nacional de Lomas de Zamora (UNLZ)**.
 
 ### 📋 La Consigna y Desafío Técnico
 El objetivo principal consistía en desarrollar un brazo robótico capaz de posicionar su extremo (*end-effector*) en coordenadas cartesianas arbitrarias $(X, Y)$ ingresadas por terminal de manera precisa y repetitiva. 
