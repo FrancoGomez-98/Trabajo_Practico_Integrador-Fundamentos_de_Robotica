@@ -4,7 +4,7 @@
 
 <h2 align="center">Facultad de Ingeniería – Universidad Nacional de Lomas de Zamora</h2>
 
-# 📐 Manipulador planar de dos grados de libertad
+# 📐  Manipulador planar de dos grados de libertad
 
 ### Cátedra: Fundamentos de Robótica | Trabajo Integrador Final
 
