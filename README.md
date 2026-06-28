@@ -89,6 +89,7 @@ graph TD
     end
 
     Motors --> Robot[🦾 Movimiento Físico del Brazo]
+```
 
 ---
 
