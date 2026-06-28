@@ -172,17 +172,26 @@ La inestabilidad fue resuelta programando una **ventana de histéresis (Zona Mue
 
 ## 👤 Autor
 
-Proyecto de control y robótica desarrollado de forma íntegra por estudiante de la Facultad de Ingeniería de la UNLZ:
+Proyecto de control y robótica desarrollado de forma íntegra por estudiante de la Facultad de Ingeniería de la UNLZ.
 
 <div align="center">
 
-| **Franco Gómez** |
-| :---: | :---: |
-| <a href="https://github.com/FrancoGomez-98"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a> |
-| <a href="https://www.linkedin.com/in/franco-gomez-0a71822a7/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a> |
+### Franco Gómez
+
+<a href="https://github.com/FrancoGomez-98">
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+
+<a href="https://www.linkedin.com/in/franco-gomez-0a71822a7/">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+
+</div>
 
 ---
 
-_Desarrollado para la cátedra de Fundamentos de Robótica – UNLZ 🚀_
+<div align="center">
+
+*Desarrollado para la cátedra de Fundamentos de Robótica – UNLZ 🚀*
 
 </div>
