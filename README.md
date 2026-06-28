@@ -89,10 +89,7 @@ graph TD
     end
 
     Motors --> Robot[🦾 Movimiento Físico del Brazo]
-
----
-
-```markdown
+```
 
 ---
 
@@ -163,6 +160,7 @@ La inestabilidad fue resuelta programando una **ventana de histéresis (Zona Mue
 ├── 📂 Media/           # Imágenes del ensamble, fotos físicas y telemetrías del monitor serial.
 ├── 📂 assets/          # Logos institucionales y recursos visuales del repositorio.
 └── 📄 README.md        # Guía técnica principal de presentación.
+```
 
 --
 
