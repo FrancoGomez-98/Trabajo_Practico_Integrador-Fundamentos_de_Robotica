@@ -126,7 +126,11 @@ Se desarrolló un filtro algebraico cíclico en `control.h` que confina el error
 Dado que el actuador del codo se encuentra anclado estáticamente en la base, la rotación de la base (Eslabón 1) desplaza físicamente la posición angular del codo en el espacio aunque el segundo motor no gire. El módulo `cinematica.h` compensa este fenómeno restando dinámicamente las componentes angulares absolutas para entregar metas aisladas y estables:
 
 $$
-\theta_{2,\mathrm{abs}}=\theta_{1,\mathrm{abs}}-\theta_{2,\mathrm{rel}}
+\theta_{2,\mathrm{absoluto}}
+=
+\theta_{1,\mathrm{absoluto}}
+-
+\theta_{2,\mathrm{relativo}}
 $$
 
 ### 3. Mitigación de Holgura Mecánica (*Backlash*) mediante Banda Muerta
@@ -159,7 +163,6 @@ La inestabilidad fue resuelta programando una **ventana de histéresis (Zona Mue
 │   ├── 📄 control.h      # Algoritmo de lazo cerrado PID, filtros y zonas muertas.
 │   ├── 📄 encoders.h     # Rutinas de lectura del bus I2C para sensores AS5600.
 │   └── 📄 motores.h      # Control de bajo nivel para pines y señales del L298N.
-├── 📂 CAD/             # Modelos tridimensionales, cubiertas protectoras y STL listos para impresión.
 ├── 📂 Media/           # Imágenes del ensamble, fotos físicas y telemetrías del monitor serial.
 ├── 📂 assets/          # Logos institucionales y recursos visuales del repositorio.
 └── 📄 README.md        # Guía técnica principal de presentación.
